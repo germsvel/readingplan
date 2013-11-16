@@ -1,0 +1,11 @@
+<h1>Welcome <%= current_user.email %></h1>
+
+<ul id="reading-lists">
+<% @bookmarks.each_with_index do |bookmark, i| %>
+  <li class='reading-list' id="list-<%= i + 1 %>"><%= bookmark.full_name %>&nbsp;
+
+  <%= button_to 'Next', bookmark, method: 'patch' %>
+
+  </li>
+<% end %>
+</ul>
