@@ -7,8 +7,10 @@ describe BibleBooks, '#last_chapter' do
     expect(bible.last_chapter('Genesis')).to eq 50
   end
 
-  it 'try with 1 john' do
-    pending('must add something so that 1 John is transformed into first_john')
+  it 'works with books with numbers like 1 John' do
+    bible = BibleBooks.new
+
+    expect(bible.last_chapter('1 John')).to eq 5
   end
 end
 
@@ -17,6 +19,12 @@ describe BibleBooks, '#next_book' do
     bible = BibleBooks.new
 
     expect(bible.next_book('Genesis')).to eq 'Exodus'
+  end
+
+  it 'works with books with numbers like 2 John' do
+    bible = BibleBooks.new
+
+    expect(bible.next_book('2 John')).to eq '3 John'
   end
 end
 

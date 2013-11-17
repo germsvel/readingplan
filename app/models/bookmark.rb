@@ -12,10 +12,9 @@ class Bookmark < ActiveRecord::Base
     if chapter == bible.last_chapter(book)
       self.book = bible.next_book(book)
       self.chapter = 1
-      self.save
     else
       self.chapter += 1
-      self.save
     end
+      self.save
   end
 end

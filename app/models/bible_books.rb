@@ -1,11 +1,23 @@
 class BibleBooks
 
   def last_chapter(book)
-    CHAPTER_COUNT[book.downcase.to_sym]
+    CHAPTER_COUNT[book_key(book)]
   end
 
   def next_book(book)
-    BOOK_PROGRESSION[book.downcase.to_sym]
+    BOOK_PROGRESSION[book_key(book)]
+  end
+
+  private
+
+  def book_key(book)
+    book_key = book.to_s.dup
+    book_key.gsub!(/^1/, 'first')
+    book_key.gsub!(/^2/, 'second')
+    book_key.gsub!(/^3/, 'third')
+    book_key.gsub!(' ', '_')
+    book_key.downcase!
+    book_key.to_sym
   end
 
   BOOK_PROGRESSION = {
