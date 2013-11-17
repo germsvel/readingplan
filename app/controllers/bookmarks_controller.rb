@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
   respond_to :json
   def update
     bookmark = Bookmark.find(params[:id])
-    if bookmark.update_attributes(chapter: bookmark.chapter + 1)
+    if bookmark.advance
       flash[:notice] = "Success"
     else
       flash[:error] = "Sorry, there was an error"
