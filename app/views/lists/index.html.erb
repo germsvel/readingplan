@@ -1,0 +1,11 @@
+<h1>Set lists</h1>
+<div> <%= link_to 'Home', :root %> </div>
+
+<ul id="reading-lists">
+  <% @bookmarks.each_with_index do |bookmark, i| %>
+    <li class='reading-list' id="list-<%= i + 1 %>">
+      <%= bookmark.full_name %>&nbsp;
+      <%= link_to 'Edit', edit_user_list_path(current_user, bookmark) %>
+    </li>
+  <% end %>
+</ul>

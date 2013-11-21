@@ -1,0 +1,19 @@
+<h1>Edit List <%= @bookmark.list_number %></h1>
+<div> <%= link_to '<< back', user_lists_path(current_user) %> </div>
+
+<div id='edit-list'>
+  <%= form_for @bookmark, url: user_list_path(current_user, @bookmark) do |f| %>
+    <span>
+      <%= f.label :book %>
+      <%= f.text_field :book %>
+    </span>
+    </br>
+    <span>
+      <%= f.label :chapter %>
+      <%= f.text_field :chapter %>
+    </span>
+
+      <%= f.submit 'Update' %>
+  <% end %>
+
+</div>

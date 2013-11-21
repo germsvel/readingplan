@@ -1,4 +1,6 @@
 <h1>Welcome <%= current_user.email %></h1>
+<div><%= button_to 'Sign out', '/sign_out' %></div>
+<div><%= link_to 'Go to Account', user_lists_path(current_user), id: 'account-btn' %></div>
 
 <ul id="reading-lists">
 <% @bookmarks.each_with_index do |bookmark, i| %>
