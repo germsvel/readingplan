@@ -1,11 +1,14 @@
-<h1>Set lists</h1>
-<div> <%= link_to 'Home', :root %> </div>
+<div class='container'>
+  <div> <%= link_to 'Home', :root , class: 'btn btn-sm btn-success'%> </div>
+  <h3>Set lists</h3>
 
-<ul id="reading-lists">
-  <% @bookmarks.each_with_index do |bookmark, i| %>
-    <li class='reading-list' id="list-<%= i + 1 %>">
-      <%= bookmark.full_name %>&nbsp;
-      <%= link_to 'Edit', edit_user_list_path(current_user, bookmark) %>
-    </li>
-  <% end %>
-</ul>
+  <table id="reading-lists", class='table table-striped'>
+    <% @bookmarks.each_with_index do |bookmark, i| %>
+      <tr class='reading-list' id="list-<%= i + 1 %>">
+        <td>List <small><%= i + 1 %></small></td>
+        <td><h4><%= bookmark.full_name %></h4></td>
+        <td><%= link_to 'Edit', edit_user_list_path(current_user, bookmark), class: 'btn btn-lg btn-warning' %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

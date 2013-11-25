@@ -15,6 +15,6 @@ feature 'Reader views lists' do
     click_button 'Sign in'
 
     expect(page).to have_css('#reading-lists')
-    expect(page).to have_css('li.reading-list', count: 10)
+    expect(page).to have_css('tr.reading-list', count: 10)
   end
 end

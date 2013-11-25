@@ -16,7 +16,7 @@ feature 'Reader updates a list' do
 
     expect(page).to have_content 'Matthew 1'
     expect(page).to have_content 'Genesis 1'
-    within('li#list-1') do
+    within('tr#list-1') do
       click_on 'Next'
     end
     expect(page).to have_content 'Matthew 2'

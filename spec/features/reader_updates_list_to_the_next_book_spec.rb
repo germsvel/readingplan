@@ -16,7 +16,7 @@ feature 'Reader updates list to the next book' do
     click_button 'Sign in'
 
     expect(page).to have_content('Matthew 28')
-    within('li#list-1') do
+    within('tr#list-1') do
       click_on 'Next'
     end
 
