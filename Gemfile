@@ -38,6 +38,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'capybara'
   gem 'sqlite3'
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :production do
