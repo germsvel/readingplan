@@ -1,5 +1,19 @@
 <div class='container'>
-  <div> <%= link_to 'Home', :root , class: 'btn btn-sm btn-success'%> </div>
+  <nav class='navbar navbar-inverse role="navigation"'>
+    <div class='container'>
+      <ul class='nav navbar-nav'>
+        <li> <%= link_to 'Home', :root , class: 'pull-left'%> </li>
+      </ul>
+      <ul class='nav navbar-nav navbar-right'>
+        <li id='sign-out-btn'><%= link_to 'Sign out', '/sign_out', class: 'pull-right' %></li>
+      </ul>
+    </div>
+  </nav>
+  <% if notice.present? || alert.present? %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+
   <h3>Set lists</h3>
 
   <table id="reading-lists", class='table table-striped'>
