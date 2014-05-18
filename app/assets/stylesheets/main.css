@@ -1,10 +1,21 @@
-nav #sign-out-btn {
-  float: right;
-}
-
 h3#welcome-sign {
   text-align:center;
+  margin-bottom: 15px;
 }
 
+.sign-out-btn {
+  margin-right: 5%;
+}
+
+
+div.devise-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 170px;
+}
+
+.devise-form .btn {
+  margin-top: 5px;
+}
 
 

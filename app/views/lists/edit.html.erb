@@ -4,9 +4,7 @@
       <ul class='nav navbar-nav'>
         <li> <%= link_to '<< back', user_lists_path(current_user), id: 'home-btn', class: 'pull-left' %> </li>
       </ul>
-      <ul class='nav navbar-nav navbar-right'>
-        <li id='sign-out-btn'><%= link_to 'Sign out', '/sign_out', class: 'pull-right' %></li>
-      </ul>
+      <%= button_to 'Sign out', sign_out_path, class: 'btn btn-danger navbar-btn navbar-right sign-out-btn' %>
     </div>
   </nav>
   <% if notice.present? || alert.present? %>
