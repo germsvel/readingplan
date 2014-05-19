@@ -4,7 +4,7 @@
       <ul class='nav navbar-nav'>
         <li> <%= link_to 'Home', :root , class: 'pull-left'%> </li>
       </ul>
-      <%= button_to 'Sign out', sign_out_path, class: 'btn btn-danger navbar-btn navbar-right sign-out-btn' %>
+      <%= button_to 'Sign out', sign_out_path, class: 'btn btn-danger navbar-btn navbar-right sign-out-btn pull-right' %>
     </div>
   </nav>
   <% if notice.present? || alert.present? %>
@@ -19,7 +19,7 @@
       <tr class='reading-list' id="list-<%= i + 1 %>">
         <td>List <small><%= i + 1 %></small></td>
         <td><h4><%= bookmark.full_name %></h4></td>
-        <td><%= link_to 'Edit', edit_user_list_path(current_user, bookmark), class: 'btn btn-lg btn-warning' %></td>
+        <td><%= link_to 'Edit', edit_user_list_path(current_user, bookmark), class: 'btn btn-lg btn-warning edit-btn' %></td>
       </tr>
     <% end %>
   </table>
