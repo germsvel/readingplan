@@ -17,6 +17,20 @@ h3#welcome-sign {
     height: 55px;
 }
 
+.navbar-link {
+  font-size: 16px;
+}
+
+#edit-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+#edit-list .text-field {
+  width: 60px;
+}
+
 
 div.devise-form {
   margin-left: auto;

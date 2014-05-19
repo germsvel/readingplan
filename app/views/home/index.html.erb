@@ -3,7 +3,7 @@
   <nav class='navbar navbar-inverse role="navigation"'>
     <div class='container'>
       <ul class='nav navbar-nav'>
-        <li id='home-btn'><%= link_to 'Go to Account', user_lists_path(current_user), id: 'account-btn', class: 'pull-left' %></li>
+        <li class='navbar-link'><%= link_to 'Go to Account', user_lists_path(current_user), id: 'account-btn', class: 'pull-left' %></li>
       </ul>
       <%= button_to 'Sign out', sign_out_path, class: 'btn btn-danger navbar-btn navbar-right sign-out-btn pull-right' %>
     </div>
