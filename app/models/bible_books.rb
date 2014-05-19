@@ -4,10 +4,6 @@ class BibleBooks
     CHAPTER_COUNT[book_key(book)]
   end
 
-  def next_book(book)
-    BOOK_PROGRESSION[book_key(book)]
-  end
-
   private
 
   def book_key(book)
@@ -19,75 +15,6 @@ class BibleBooks
     book_key.downcase!
     book_key.to_sym
   end
-
-  BOOK_PROGRESSION = {
-    matthew: 'Mark',
-    mark: 'Luke',
-    luke: 'John',
-    john: 'Matthew',
-    genesis: 'Exodus',
-    exodus: 'Leviticus',
-    leviticus: 'Numbers',
-    numbers: 'Deuteronomy',
-    deuteronomy: 'Genesis',
-    romans: '1 Corinthians',
-    first_corinthians: '2 Corinthians',
-    second_corinthians: 'Galatians',
-    galatians: 'Ephesians',
-    ephesians: 'Philippians',
-    philippians: 'Colossians',
-    colossians: 'Hebrews',
-    hebrews: 'Romans',
-    first_thessalonians: '2 Thessalonians',
-    second_thessalonians: '1 Timothy',
-    first_timothy: '2 Timothy',
-    second_timothy: 'Titus',
-    titus: 'Philemon',
-    philemon: 'James',
-    james: '1 Peter',
-    first_peter: '2 Peter',
-    second_peter: '1 John',
-    first_john: '2 John',
-    second_john: '3 John',
-    third_john: 'Jude',
-    jude: 'Revelation',
-    revelation: '1 Thessalonians',
-    job: 'Ecclesiastes',
-    ecclesiastes: 'Song of Solomon',
-    song_of_solomon: 'Job',
-    psalms: 'Psalms',
-    proverbs: 'Proverbs',
-    joshua: 'Judges',
-    judges: 'Ruth',
-    ruth: '1 Samuel',
-    first_samuel: '2 Samuel',
-    second_samuel: '1 Kings',
-    first_kings: '2 Kings',
-    second_kings: '1 Chronicles',
-    first_chronicles: '2 Chronicles',
-    second_chronicles: 'Ezra',
-    ezra: 'Nehemiah',
-    nehemiah: 'Esther',
-    esther: 'Joshua',
-    isaiah: 'Jeremiah',
-    jeremiah: 'Lamentations',
-    lamentations: 'Ezekiel',
-    ezekiel: 'Daniel',
-    daniel: 'Hosea',
-    hosea: 'Joel',
-    joel: 'Amos',
-    amos: 'Obadiah',
-    obadiah: 'Jonah',
-    jonah: 'Micah',
-    micah: 'Nahum',
-    nahum: 'Habakkuk',
-    habakkuk: 'Zephaniah',
-    zephaniah: 'Haggai',
-    haggai: 'Zechariah',
-    zechariah: 'Malachi',
-    malachi: 'Isaiah',
-    acts: 'Acts'
-  }
 
   CHAPTER_COUNT = {
     genesis: 50,

@@ -7,6 +7,8 @@ class ListsController < ApplicationController
 
   def edit
     @bookmark = Bookmark.find(params[:id])
+    list_number = @bookmark.list_number
+    @list_books = HornerLists.new.list(list_number)
   end
 
   def update

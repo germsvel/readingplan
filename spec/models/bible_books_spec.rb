@@ -14,17 +14,3 @@ describe BibleBooks, '#last_chapter' do
   end
 end
 
-describe BibleBooks, '#next_book' do
-  it 'returns the next book in the list' do
-    bible = BibleBooks.new
-
-    expect(bible.next_book('Genesis')).to eq 'Exodus'
-  end
-
-  it 'works with books with numbers like 2 John' do
-    bible = BibleBooks.new
-
-    expect(bible.next_book('2 John')).to eq '3 John'
-  end
-end
-

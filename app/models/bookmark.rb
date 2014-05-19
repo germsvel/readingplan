@@ -9,8 +9,10 @@ class Bookmark < ActiveRecord::Base
 
   def advance
     bible = BibleBooks.new
+    horner_lists = HornerLists.new
+
     if chapter == bible.last_chapter(book)
-      self.book = bible.next_book(book)
+      self.book = horner_lists.next_book(book)
       self.chapter = 1
     else
       self.chapter += 1

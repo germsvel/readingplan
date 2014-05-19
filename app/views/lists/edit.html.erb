@@ -1,16 +1,28 @@
 <div class='container'>
-  <div> <%= link_to '<< back', user_lists_path(current_user), class: 'btn btn-sm btn-success' %> </div>
+  <nav class='navbar navbar-inverse role="navigation"'>
+    <div class='container'>
+      <ul class='nav navbar-nav'>
+        <li class='navbar-link'> <%= link_to '< back', user_lists_path(current_user), id: 'home-btn', class: 'pull-left' %> </li>
+      </ul>
+      <%= button_to 'Sign out', sign_out_path, class: 'btn btn-danger navbar-btn navbar-right sign-out-btn pull-right' %>
+    </div>
+  </nav>
+  <% if notice.present? || alert.present? %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+
   <h3>Edit List <%= @bookmark.list_number %></h3>
 
   <div id='edit-list'>
     <%= form_for @bookmark, url: user_list_path(current_user, @bookmark), class: 'form form-horizontal' do |f| %>
       <div class='form-group'>
         <%= f.label :book %>
-        <%= f.text_field :book, class: 'form-control' %>
+        <%= f.select :book, @list_books ,class: 'form-control' %>
       </div>
       <div class='form-group'>
         <%= f.label :chapter %>
-        <%= f.text_field :chapter, class: 'form-control' %>
+        <%= f.text_field :chapter, class: 'form-control text-field' %>
       </div>
 
         <%= f.submit 'Update', class: 'btn btn-primary' %>
